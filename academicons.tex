@@ -1,0 +1,122 @@
+% Copyright 2015-2017 Diogo A. B. Fernandes
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass{ltxdoc}
+
+\usepackage[numbered]{hypdoc}
+\usepackage{hologo}
+\usepackage{hyperref,xcolor}
+\usepackage{longtable,booktabs}
+\usepackage{\jobname}
+
+\definecolor{blue}{rgb}{0.19,0.31,0.54}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, hyperindex}
+
+\usepackage{totcount}
+\newtotcounter{IconsCounter}
+\setcounter{IconsCounter}{0}
+
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+
+\begin{document}
+\title{The \textsf{\jobname} package\\
+High quality icons of online academic profiles}
+\author{%
+  Diogo A. B. Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~~(\hologo{LaTeX} code)\\%
+  James Walsh (font and icons design)}
+\date{v1.8.0, released on May 15, 2017}
+\maketitle
+
+\begin{abstract}
+The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with the free \emph{Academicons} font, allowing to access \total{IconsCounter} high quality icons of online academic profiles.
+\end{abstract}
+
+\changes{v1.8.0}{2017/05/15}{Major release of v1.8.0.}
+\changes{v1.7.2}{2016/06/12}{Fix release: corrected a bug in the style file.}
+\changes{v1.7.1}{2016/06/12}{Fix release: corrected a bug in the style file.}
+\changes{v1.7.0}{2016/05/16}{Major release of v1.7.0.}
+\changes{v1.6.0-1}{2016/03/02}{Better documentation.}
+\changes{v1.6.0}{2016/01/30}{Major release of v1.6.0.}
+\changes{v1.4.0-1}{2015/05/30}{Fix release: corrected a few typos and errors in the manual.}
+\changes{v1.4.0}{2015/05/28}{First public release (version number set to match the included \texttt{academicons.ttf} font version).}
+
+\bigskip
+
+\section{Description}
+The \textsf{\jobname} package provides access in \hologo{(La)TeX} to \total{IconsCounter} high quality icons of online academic profiles included in the free \emph{Academicons} font. This package requires the \textsf{fontspec} package and either the \hologo{Xe}\hologo{(La)TeX} or Lua\hologo{(La)TeX} engine to load the \emph{Academicons} font from the system, which requires installing the bundled \texttt{academicons.ttf} font file. As new releases come out, it is recommended to install the bundled font version as there may be differences between the package and previous font versions or newest font versions not yet contemplated in the package.
+
+The \emph{Academicons} font was designed by James Walsh and released\footnote{See \url{http://jpswalsh.github.io/academicons/}.} under the open SIL Open Font License\footnote{Available at \url{http://scripts.sil.org/OFL}.}. This package is a redistribution of the free \emph{Academicons} font with specific bindings for \hologo{(La)TeX}. It is inspired and based on the \textsf{fontawesome}\footnote{Available at \url{http://www.ctan.org/pkg/fontawesome}.} package.
+
+\section{Usage}
+\DescribeMacro{\aiicon}
+The \textsf{\jobname} package provides the generic \cs{aiicon} command to access icons, which takes as mandatory argument the \meta{name} of the desired icon. It also provides individual direct commands for each specific icon. The full list of icons and their respective names and direct commands can be found below. For example, \cs{aiicon\{googlescholar\}} yields the same result as \cs{aiGoogleScholar}.
+
+\newenvironment{showcase}%
+  {%
+   \begin{longtable}{cp{3.5cm}p{4.5cm}}
+   \cmidrule[\heavyrulewidth]{1-3}% \toprule
+ %   \bfseries \#&\bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
+   \bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
+   \cmidrule{1-3}\endhead}
+  {\cmidrule[\heavyrulewidth]{1-3}% \bottomrule
+   \end{longtable}}
+\newcommand{\icon}[2]{%
+\stepcounter{IconsCounter}%
+% \arabic{IconsCounter}&%
+\aiicon{#1}&%
+\itshape #1&%
+\ttfamily\textbackslash #2\index{\ttfamily\textbackslash #2}\\%
+\stepcounter{IconsCounter}%
+% \arabic{IconsCounter}&%
+\aiicon{#1-square}&%
+\itshape #1-square&%
+\ttfamily\textbackslash #2Square\index{\ttfamily\textbackslash #2Square}\\%
+}
+
+\newpage
+\subsection{Academicons Icons}
+\label{sec:icons}
+
+\begin{showcase}
+  \icon{academia}{aiAcademia}
+  \icon{acclaim}{aiAcclaim}
+  \icon{acm}{aiACM}
+  \icon{ads}{aiADS}
+  \icon{arxiv}{aiarXiv}
+  \icon{biorxiv}{aibioRxiv}
+  \icon{ceur}{aiCEUR}
+  \icon{coursera}{aiCoursera}
+  \icon{dataverse}{aidataverse}
+  \icon{dblp}{aidblp}
+  \icon{depsy}{aiDepsy}
+  \icon{doi}{aiDoi}
+  \icon{dryad}{aiDryad}
+  \icon{figshare}{aiFigshare}
+  \icon{googlescholar}{aiGoogleScholar}
+  \icon{ieee}{aiIEEE}
+  \icon{impactstory}{aiImpactstory}
+  \icon{inspire}{aiInspire}
+  \icon{mendeley}{aiMendeley}
+  \icon{open-access}{aiOpenAccess}
+  \icon{orcid}{aiOrcid}
+  \icon{osf}{aiOSF}
+  \icon{overleaf}{aiOverleaf}
+  \icon{philpapers}{aiPhilPapers}
+  \icon{piazza}{aiPiazza}
+  \icon{publons}{aiPublons}
+  \icon{pubmed}{aiPubMed}
+  \icon{researchgate}{aiResearchGate}
+  \icon{scirate}{aiSciRate}
+  \icon{springer}{aiSpringer}
+  \icon{zotero}{aiZotero}
+\end{showcase}
+
+\PrintChanges
+% \PrintIndex
+\end{document}
+
