@@ -5,7 +5,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{academicons}[2018/03/27 v1.8.1 Academicons Icons]
+\ProvidesPackage{academicons}[2018/04/03 v1.8.3 Academicons Icons]
 
 \usepackage{fontspec}
 
@@ -301,5 +301,23 @@
   aiicon@zotero-square\endcsname{\symbol{"E861}}
 \def\aiZoteroSquare{{\AI\csname%
   aiicon@zotero-square\endcsname}}
+
+\expandafter\def\csname%
+  aiicon@mathoverflow\endcsname{\symbol{"E901}}
+\def\aiMathOverflow{{\AI\csname%
+  aiicon@mathoverflow\endcsname}}
+\expandafter\def\csname%
+  aiicon@mathoverflow-square\endcsname{\symbol{"E900}}
+\def\aiMathOverflowSquare{{\AI\csname%
+  aiicon@mathoverflow-square\endcsname}}
+
+\expandafter\def\csname%
+  aiicon@cv\endcsname{\symbol{"E903}}
+\def\aiCV{{\AI\csname%
+  aiicon@cv\endcsname}}
+\expandafter\def\csname%
+  aiicon@cv-square\endcsname{\symbol{"E902}}
+\def\aiCVSquare{{\AI\csname%
+  aiicon@cv-square\endcsname}}
 
 \endinput
