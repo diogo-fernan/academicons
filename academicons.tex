@@ -24,8 +24,9 @@
 \CodelineIndex
 \RecordChanges
 
+\changes{v1.8.6}{2018/04/03}{Release of v1.8.6.}
 \changes{v1.8.3}{2018/04/03}{Release of v1.8.3.}
-\changes{v1.8.1}{2018/03/27}{Enhancement release: adjusted \texttt{\textbackslash{}newfontfamily} to account for the font installed via \texttt{tlmgr}.}
+\changes{v1.8.0-1}{2018/03/27}{Enhancement release: adjusted \texttt{\textbackslash{}newfontfamily} to account for the font installed via \texttt{tlmgr}.}
 \changes{v1.8.0}{2017/05/15}{Major release of v1.8.0.}
 \changes{v1.7.2}{2016/06/12}{Fix release: corrected a bug in the style file.}
 \changes{v1.7.1}{2016/06/12}{Fix release: corrected a bug in the style file.}
@@ -41,11 +42,11 @@ High quality icons of online academic profiles}
 \author{%
   Diogo A. B. Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~~(\hologo{LaTeX} code)\\%
   James Walsh (font and icons design)}
-\date{v1.8.3, released on 03 April 2018}
+\date{v1.8.6, released on 16 April 2018}
 \maketitle
 
 \begin{abstract}
-The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with the free \emph{Academicons} font, allowing to access \total{IconsCounter} high quality icons of online academic profiles.
+The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with the free \emph{Academicons} font, allowing access to \total{IconsCounter} high quality icons of online academic profiles.
 \end{abstract}
 
 \bigskip
@@ -61,7 +62,7 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
 
 \newenvironment{showcase}%
   {%
-   \begin{longtable}{cp{3.5cm}p{4.5cm}}
+   \begin{longtable}{cp{3.75cm}p{4.5cm}}
    \cmidrule[\heavyrulewidth]{1-3}% \toprule
  %   \bfseries \#&\bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
    \bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
@@ -89,21 +90,25 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{academia}{aiAcademia}
   \icon{acclaim}{aiAcclaim}
   \icon{acm}{aiACM}
+  \icon{acmdl}{aiACMDL}
   \icon{ads}{aiADS}
   \icon{arxiv}{aiarXiv}
   \icon{biorxiv}{aibioRxiv}
   \icon{ceur}{aiCEUR}
   \icon{coursera}{aiCoursera}
+  \icon{cv}{aiCV}
   \icon{dataverse}{aidataverse}
   \icon{dblp}{aidblp}
   \icon{depsy}{aiDepsy}
   \icon{doi}{aiDoi}
   \icon{dryad}{aiDryad}
+  \icon{ideas-repec}{aiIdeasRepec}
   \icon{figshare}{aiFigshare}
   \icon{googlescholar}{aiGoogleScholar}
   \icon{ieee}{aiIEEE}
   \icon{impactstory}{aiImpactstory}
   \icon{inspire}{aiInspire}
+  \icon{lattes}{aiLattes}
   \icon{mathoverflow}{aiMathOverflow}
   \icon{mendeley}{aiMendeley}
   \icon{open-access}{aiOpenAccess}
@@ -114,10 +119,11 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{piazza}{aiPiazza}
   \icon{publons}{aiPublons}
   \icon{pubmed}{aiPubMed}
+  \icon{researcherid}{aiResearcherID}
   \icon{researchgate}{aiResearchGate}
   \icon{scirate}{aiSciRate}
+  \icon{semantic-scholar}{aiSemanticScholar}
   \icon{springer}{aiSpringer}
-  \icon{cv}{aiCV}
   \icon{zotero}{aiZotero}
 \end{showcase}
 
