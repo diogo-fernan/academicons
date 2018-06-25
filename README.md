@@ -23,7 +23,7 @@ icons and their respective names and direct commands can be found in the
 manual. For example, `\aiicon{googlescholar}` yields the same result as
 `\aiGoogleScholar`.
 
-academicons (La)TeX package
-<https://www.ctan.org/pkg/academicons>
-Version: 1.8.6-1
+academicons (La)TeX package\
+<https://www.ctan.org/pkg/academicons>\
+Version: 1.8.6-1\
 License: LaTeX Project Public License, version 1.3c
