@@ -2,12 +2,12 @@
 
 The *academicons* package provides access in (La)TeX to 76 high quality icons
 of online academic profiles included in the free *Academicons* font. This
-package requires the *fontspec* package and either the Xe(La)TeX or Lua(La)TeX
-engine to load the *Academicons* font from the system, which requires installing the
-bundled *academicons.ttf* font file. As new releases come out, it is recommended
-to install the bundled font version as there may be differences between the
-package and previous font versions or newest font versions not yet contemplated
-in the package.
+package requires either the Xe(La)TeX or Lua(La)TeX engine to load the
+*Academicons* font from the system, which requires installing the bundled
+*academicons.ttf* font file. As new releases come out, it is recommended to
+install the bundled font version as there may be differences between the package
+and previous font versions or newest font versions not yet contemplated in the
+package.
 
 The *Academicons* font was designed by James Walsh and released (see
 <http://jpswalsh.github.io/academicons/>) under the open SIL Open Font License
@@ -25,5 +25,5 @@ manual. For example, `\aiicon{googlescholar}` yields the same result as
 
 academicons (La)TeX package
 <https://www.ctan.org/pkg/academicons>
-Version: 1.8.6
+Version: 1.8.6-1
 License: LaTeX Project Public License, version 1.3c
