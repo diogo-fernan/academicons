@@ -24,6 +24,7 @@
 \CodelineIndex
 \RecordChanges
 
+\changes{v1.8.6-2}{2018/06/27}{Fixed bugs in a few icon commands.}
 \changes{v1.8.6-1}{2018/06/25}{Removed \texttt{fontspec} dependency.}
 \changes{v1.8.6}{2018/04/03}{Release of v1.8.6.}
 \changes{v1.8.3}{2018/04/03}{Release of v1.8.3.}
@@ -43,7 +44,7 @@ High quality icons of online academic profiles}
 \author{%
   Diogo A. B. Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~~(\hologo{LaTeX} code)\\%
   James Walsh (font and icons design)}
-\date{v1.8.6-1, released on 25 June 2018}
+\date{v1.8.6-2, released on 27 June 2018}
 \maketitle
 
 \begin{abstract}
@@ -73,11 +74,13 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
 \newcommand{\icon}[2]{%
 \stepcounter{IconsCounter}%
 % \arabic{IconsCounter}&%
+%\csname #2\endcsname%
 \aiicon{#1}&%
 \itshape #1&%
 \ttfamily\textbackslash #2\index{\ttfamily\textbackslash #2}\\%
 \stepcounter{IconsCounter}%
 % \arabic{IconsCounter}&%
+%\csname #2Square\endcsname%
 \aiicon{#1-square}&%
 \itshape #1-square&%
 \ttfamily\textbackslash #2Square\index{\ttfamily\textbackslash #2Square}\\%
@@ -98,12 +101,12 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{ceur}{aiCEUR}
   \icon{coursera}{aiCoursera}
   \icon{cv}{aiCV}
-  \icon{dataverse}{aidataverse}
+  \icon{dataverse}{aiDataverse}
   \icon{dblp}{aidblp}
   \icon{depsy}{aiDepsy}
   \icon{doi}{aiDoi}
   \icon{dryad}{aiDryad}
-  \icon{ideas-repec}{aiIdeasRepec}
+  \icon{ideas-repec}{aiIDEASRePEc}
   \icon{figshare}{aiFigshare}
   \icon{googlescholar}{aiGoogleScholar}
   \icon{ieee}{aiIEEE}
