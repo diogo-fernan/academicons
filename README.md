@@ -27,3 +27,7 @@ academicons (La)TeX package\
 <https://www.ctan.org/pkg/academicons>\
 Version: 1.8.6-2\
 License: LaTeX Project Public License, version 1.3c
+
+# Author
+
+[@dfernan__](https://twitter.com/dfernan__)
