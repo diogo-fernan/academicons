@@ -1,6 +1,6 @@
 # academicons
 
-The *academicons* package provides access in (La)TeX to 124 high quality icons
+The *academicons* package provides access in (La)TeX to 138 high quality icons
 of online academic profiles included in the free *Academicons* font. This
 package requires either the Xe(La)TeX or Lua(La)TeX engine to load the
 *Academicons* font from the system, which requires installing the bundled
@@ -25,7 +25,7 @@ manual. For example, `\aiicon{googlescholar}` yields the same result as
 
 academicons (La)TeX package\
 <https://www.ctan.org/pkg/academicons>\
-Version: 1.9.1
+Version: 1.9.1-2
 License: LaTeX Project Public License, version 1.3c
 
 # Author
