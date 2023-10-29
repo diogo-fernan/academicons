@@ -8,13 +8,13 @@
 
 \usepackage[numbered]{hypdoc}
 \usepackage{hologo}
-\usepackage{hyperref,xcolor}
+\usepackage{hyperref,xcolor,awesomebox}
 \usepackage{longtable,booktabs}
 %\usepackage{\jobname}
-\usepackage{./academicons}
+\usepackage{academicons}
 
 \definecolor{blue}{rgb}{0.19,0.31,0.54}
-\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, hyperindex}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue}
 
 \usepackage{totcount}
 \newtotcounter{IconsCounter}
@@ -24,6 +24,7 @@
 \CodelineIndex
 \RecordChanges
 
+\changes{v1.9.4}{2023/10/29}{Release of v1.9.4.}
 \changes{v1.9.1-2}{2022/03/10}{Fix release: included some missing icons.}
 \changes{v1.9.1}{2021/11/26}{Release of v1.9.1.}
 \changes{v1.9.0}{2020/08/14}{Release of v1.9.0.}
@@ -47,7 +48,7 @@ High quality icons of online academic profiles}
 \author{%
   Diogo A. B. Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~~(\hologo{LaTeX} code)\\%
   James Walsh (font and icons design)}
-\date{v1.9.1-2, released on 10 March 2022}
+\date{v1.9.4, released on 29 October 2023}
 \maketitle
 
 \begin{abstract}
@@ -57,7 +58,7 @@ The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with t
 \bigskip
 
 \section{Description}
-The \textsf{\jobname} package provides access in \hologo{(La)TeX} to \total{IconsCounter} high quality icons of online academic profiles included in the free \emph{Academicons} font. This package requires either the \hologo{Xe}\hologo{(La)TeX} or Lua\hologo{(La)TeX} engine to load the \emph{Academicons} font from the system, which requires installing the bundled \texttt{academicons.ttf} font file. As new releases come out, it is recommended to install the bundled font version as there may be differences between the package and previous font versions or newest font versions not yet contemplated in the package.
+The \textsf{\jobname} package provides access in \hologo{(La)TeX} to \total{IconsCounter} high quality icons of online academic profiles included in the free \emph{Academicons} font. This package requires either the \hologo{Xe}\hologo{(La)TeX} or Lua\hologo{(La)TeX} engine to load the \emph{Academicons} font from the system, which requires installing the bundled \texttt{academicons.ttf} font file. \warningbox{As new releases come out, it is recommended to install the bundled font version as there may be differences between the package and previous font versions or newest font versions not yet contemplated in the package.}
 
 The \emph{Academicons} font was designed by James Walsh and released\footnote{See \url{http://jpswalsh.github.io/academicons/}.} under the open SIL Open Font License\footnote{Available at \url{http://scripts.sil.org/OFL}.}. This package is a redistribution of the free \emph{Academicons} font with specific bindings for \hologo{(La)TeX}. It is inspired and based on the \textsf{fontawesome}\footnote{Available at \url{http://www.ctan.org/pkg/fontawesome}.} package.
 
@@ -105,6 +106,7 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{biorxiv}{aibioRxiv}
   \icon{ceur}{aiCEUR}
   \icon{ciencia-vitae}{aiCIENCIAVITAE}
+  \icon{clarivate}{aiClarivate}
   \icon{closed-access}{aiClosedAccess}
   \icon{conversation}{aiConversation}
   \icon{coursera}{aiCoursera}
@@ -128,6 +130,7 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{inpn}{aiINPN}
   \icon{inspire}{aiInspire}
   \icon{isidore}{aiISIDORE}
+  \icon{isni}{aiIsni}
   \icon{jstor}{aiJSTOR}
   \icon{lattes}{aiLattes}
   \icon{mathoverflow}{aiMathOverflow}
@@ -161,6 +164,8 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{springer}{aiSpringer}
   \icon{ssrn}{aiSSRN}
   \icon{stackoverflow}{aiStackOverflow}
+  \icon{viaf}{aiViaf}
+  \icon{wiley}{aiWiley}
   \icon{zenodo}{aiZenodo}
   \icon{zotero}{aiZotero}
 \end{showcase}
@@ -168,4 +173,3 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
 \PrintChanges
 % \PrintIndex
 \end{document}
-
