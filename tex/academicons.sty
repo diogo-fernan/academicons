@@ -1,0 +1,45 @@
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{academicons}[2025/09/17 v1.9.6 Academicons Icons]
+
+\RequirePackage{iftex}
+
+\def\ai@family{academicons}
+
+% pdfTeX
+\ifPDFTeX
+  % \RequirePackage[T1]{fontenc}
+  % \newcommand\ai{\usefont{U}{\ai@family}{m}{n}}
+  % \DeclareRobustCommand\ai@icon[1]{{\fontfamily{\ai@family}\selectfont#1}}
+
+  % \DeclareRobustCommand\ai@icon{\fontencoding{U}\fontfamily{\ai@family}\selectfont}
+  \DeclareRobustCommand\ai@icon{\usefont{U}{\ai@family}{m}{n}\selectfont}
+
+  \input{academicons-pdftex.tex}
+
+% XeTeX/LuaTeX
+\else
+  \RequirePackage{fontspec}
+
+  % \newfontfamily{\ai}{\ai@family}
+  % \newfontfamily\ai@font{\ai@family}[Path=./,Extension=.otf]
+  % \newfontfamily\ai@font{\ai@family}[Path=./,Extension=.ttf]
+  \newfontfamily\ai@font{\ai@family}
+
+  % \newcommand\ai@unicodefont{\usefont{TU}{\ai@family}{m}{n}}
+  % \renewcommand*{\aiicon}[1]{\ai@font\csname aiicon@#1\endcsname}
+
+  \DeclareRobustCommand\ai@icon[1]{\ai@font#1}
+
+  \input{academicons-xeluatex.tex}
+\fi
+
+% user commands
+\newcommand*{\aiicon}[1]{\ai@icon{\csname aiicon@#1\endcsname}}
+% \newcommand*{\aiicon}[1]{\csname aiicon@#1\endcsname}
+\input{academicons-generic.tex}
+
+\endinput

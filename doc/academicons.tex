@@ -1,5 +1,3 @@
-% Copyright 2015-2021 Diogo A. B. Fernandes
-%
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
@@ -8,7 +6,7 @@
 
 \usepackage[numbered]{hypdoc}
 \usepackage{hologo}
-\usepackage{hyperref,xcolor,awesomebox}
+\usepackage{hyperref,xcolor}
 \usepackage{longtable,booktabs}
 %\usepackage{\jobname}
 \usepackage{academicons}
@@ -20,79 +18,83 @@
 \newtotcounter{IconsCounter}
 \setcounter{IconsCounter}{0}
 
-\EnableCrossrefs
-\CodelineIndex
-\RecordChanges
+% \EnableCrossrefs
+% \CodelineIndex
+% \RecordChanges
 
-\changes{v1.9.4}{2023/10/29}{Release of v1.9.4.}
-\changes{v1.9.1-2}{2022/03/10}{Fix release: included some missing icons.}
-\changes{v1.9.1}{2021/11/26}{Release of v1.9.1.}
-\changes{v1.9.0}{2020/08/14}{Release of v1.9.0.}
-\changes{v1.8.6-2}{2018/06/27}{Fixed bugs in a few icon commands.}
-\changes{v1.8.6-1}{2018/06/25}{Removed \texttt{fontspec} dependency.}
-\changes{v1.8.6}{2018/04/03}{Release of v1.8.6.}
-\changes{v1.8.3}{2018/04/03}{Release of v1.8.3.}
-\changes{v1.8.0-1}{2018/03/27}{Enhancement release: adjusted \texttt{\textbackslash{}newfontfamily} to account for the font installed via \texttt{tlmgr}.}
-\changes{v1.8.0}{2017/05/15}{Major release of v1.8.0.}
-\changes{v1.7.2}{2016/06/12}{Fix release: corrected a bug in the style file.}
-\changes{v1.7.1}{2016/06/12}{Fix release: corrected a bug in the style file.}
-\changes{v1.7.0}{2016/05/16}{Major release of v1.7.0.}
-\changes{v1.6.0-1}{2016/03/02}{Better documentation.}
-\changes{v1.6.0}{2016/01/30}{Major release of v1.6.0.}
-\changes{v1.4.0-1}{2015/05/30}{Fix release: corrected a few typos and errors in the manual.}
-\changes{v1.4.0}{2015/05/28}{First public release (version number set to match the included \texttt{academicons.ttf} font version).}
+% \changes{v1.9.6}{2025/09/17}{pdfTeX support.}
+% \changes{v1.9.4}{2023/10/29}{Release of v1.9.4.}
+% \changes{v1.9.1-2}{2022/03/10}{Fix release: included some missing icons.}
+% \changes{v1.9.1}{2021/11/26}{Release of v1.9.1.}
+% \changes{v1.9.0}{2020/08/14}{Release of v1.9.0.}
+% \changes{v1.8.6-2}{2018/06/27}{Fixed bugs in a few icon macros.}
+% \changes{v1.8.6-1}{2018/06/25}{Removed \texttt{fontspec} dependency.}
+% \changes{v1.8.6}{2018/04/03}{Release of v1.8.6.}
+% \changes{v1.8.3}{2018/04/03}{Release of v1.8.3.}
+% \changes{v1.8.0-1}{2018/03/27}{Enhancement release: adjusted \texttt{\textbackslash{}newfontfamily} to account for the font installed via \texttt{tlmgr}.}
+% \changes{v1.8.0}{2017/05/15}{Major release of v1.8.0.}
+% \changes{v1.7.2}{2016/06/12}{Fix release: corrected a bug in the style file.}
+% \changes{v1.7.1}{2016/06/12}{Fix release: corrected a bug in the style file.}
+% \changes{v1.7.0}{2016/05/16}{Major release of v1.7.0.}
+% \changes{v1.6.0-1}{2016/03/02}{Better documentation.}
+% \changes{v1.6.0}{2016/01/30}{Major release of v1.6.0.}
+% \changes{v1.4.0-1}{2015/05/30}{Fix release: corrected a few typos and errors in the manual.}
+% \changes{v1.4.0}{2015/05/28}{First public release (version number set to match the included \texttt{academicons.ttf} font version).}
 
 \begin{document}
 \title{The \textsf{\jobname} package\\
 High quality icons of online academic profiles}
 \author{%
-  Diogo A. B. Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~~(\hologo{LaTeX} code)\\%
+  Diogo Fernandes\thanks{Email: \href{mailto:diogoabfernandes@gmail.com}{\tt diogoabfernandes@gmail.com}}~(\hologo{LaTeX} code)\\%
   James Walsh (font and icons design)}
-\date{v1.9.4, released on 29 October 2023}
+\date{v1.9.6, released on the 17th of September, 2025}
 \maketitle
 
 \begin{abstract}
-The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with the free \emph{Academicons} font, allowing access to \total{IconsCounter} high quality icons of online academic profiles.
+The \textsf{\jobname} package provides specific \hologo{(La)TeX} bindings with the free \emph{Academicons} font, allowing access to \total{IconsCounter} high quality icons of online academic socials.
 \end{abstract}
 
 \bigskip
 
 \section{Description}
-The \textsf{\jobname} package provides access in \hologo{(La)TeX} to \total{IconsCounter} high quality icons of online academic profiles included in the free \emph{Academicons} font. This package requires either the \hologo{Xe}\hologo{(La)TeX} or Lua\hologo{(La)TeX} engine to load the \emph{Academicons} font from the system, which requires installing the bundled \texttt{academicons.ttf} font file. \warningbox{As new releases come out, it is recommended to install the bundled font version as there may be differences between the package and previous font versions or newest font versions not yet contemplated in the package.}
+The \textsf{\jobname} package provides access in \hologo{(La)TeX} to \total{IconsCounter} high quality icons of online academic socials included in the free \emph{Academicons} font. This package works with both \hologo{Xe}\hologo{(La)TeX} or Lua\hologo{(La)TeX} by using \textsf{fontspec} to load the included font, as well as with pdf\hologo{(La)TeX} by loading a Type 1 converted format of the original font.
 
 The \emph{Academicons} font was designed by James Walsh and released\footnote{See \url{http://jpswalsh.github.io/academicons/}.} under the open SIL Open Font License\footnote{Available at \url{http://scripts.sil.org/OFL}.}. This package is a redistribution of the free \emph{Academicons} font with specific bindings for \hologo{(La)TeX}. It is inspired and based on the \textsf{fontawesome}\footnote{Available at \url{http://www.ctan.org/pkg/fontawesome}.} package.
 
 \section{Usage}
 \DescribeMacro{\aiicon}
-The \textsf{\jobname} package provides the generic \cs{aiicon} command to access icons, which takes as mandatory argument the \meta{name} of the desired icon. It also provides individual direct commands for each specific icon. The full list of icons and their respective names and direct commands can be found below. For example, \cs{aiicon\{googlescholar\}} yields the same result as \cs{aiGoogleScholar}.
+The generic \cs{aiicon} macro takes as mandatory argument the lowercase \meta{name} of the desired icon. Icons can also be accessed directly by their respective macro in CamelCase. For example, \cs{aiicon\{googlescholar\}} yields the same result as \cs{aiGoogleScholar}.
+%
+The full list of icons with their respective names and direct macros can be found in the next pages.
 
-\newenvironment{showcase}%
-  {%
-   \begin{longtable}{cp{3.75cm}p{4.5cm}}
+\newenvironment{showcase}{%
+   \begin{longtable}{cp{3.75cm}p{4.5cm}}%
    \cmidrule[\heavyrulewidth]{1-3}% \toprule
- %   \bfseries \#&\bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
-   \bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Command\\
-   \cmidrule{1-3}\endhead}
-  {\cmidrule[\heavyrulewidth]{1-3}% \bottomrule
-   \end{longtable}}
+   % \bfseries \#&\bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Macro\\
+   \bfseries Icon&{\bfseries Name} (\meta{name})&\bfseries Direct Macro\\%
+   \cmidrule{1-3}\endhead%
+}{%
+  \cmidrule[\heavyrulewidth]{1-3}% \bottomrule
+  \end{longtable}%
+}
+
 \newcommand{\icon}[2]{%
-\stepcounter{IconsCounter}%
-% \arabic{IconsCounter}&%
-%\csname #2\endcsname%
-\aiicon{#1}&%
-\itshape #1&%
-\ttfamily\textbackslash #2\index{\ttfamily\textbackslash #2}\\%
-\stepcounter{IconsCounter}%
-% \arabic{IconsCounter}&%
-%\csname #2Square\endcsname%
-\aiicon{#1-square}&%
-\itshape #1-square&%
-\ttfamily\textbackslash #2Square\index{\ttfamily\textbackslash #2Square}\\%
+  \stepcounter{IconsCounter}%
+  % \arabic{IconsCounter}&%
+  % \csname #2\endcsname%
+  \aiicon{#1}&%
+  \itshape #1&%
+  \ttfamily\textbackslash #2\index{\ttfamily\textbackslash #2}\\%
+  \stepcounter{IconsCounter}%
+  % \arabic{IconsCounter}&%
+  % \csname #2Square\endcsname%
+  \aiicon{#1-square}&%
+  \itshape #1-square&%
+  \ttfamily\textbackslash #2Square\index{\ttfamily\textbackslash #2Square}\\%
 }
 
 \newpage
 \subsection{Academicons Icons}
-\label{sec:icons}
 
 \begin{showcase}
   \icon{academia}{aiAcademia}
@@ -170,6 +172,6 @@ The \textsf{\jobname} package provides the generic \cs{aiicon} command to access
   \icon{zotero}{aiZotero}
 \end{showcase}
 
-\PrintChanges
+% \PrintChanges
 % \PrintIndex
 \end{document}

@@ -1,0 +1,13 @@
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+%
+% This work has the LPPL maintenance status `maintained'.
+%
+
+\ProvidesFile{tuacademicons.fd}[2025/09/17 Font definitions for TU/academicons]
+
+\DeclareFontFamily{TU}{academicons}{}
+\DeclareFontShape{TU}{academicons}{m}{n}{<-> \UnicodeFontFile{academicons.ttf}{}
+
+\endinput
