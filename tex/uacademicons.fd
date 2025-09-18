@@ -1,11 +1,13 @@
-% Copyright 2020 Diogo A. B. Fernandes
-%
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 %
 % This work has the LPPL maintenance status `maintained'.
 %
-\DeclareFontFamily{TU}{academicons}{}
-\DeclareFontShape{TU}{academicons}{m}{n}
-  {<-> \UnicodeFontFile{academicons.ttf}{}}{}
+
+\ProvidesFile{uacademicons.fd}[2025/09/17 Font definitions for U/academicons]
+
+\DeclareFontFamily{U}{academicons}{}
+\DeclareFontShape{U}{academicons}{m}{n}{<-> academicons}{}
+
+\endinput
