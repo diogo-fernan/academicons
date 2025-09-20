@@ -27,7 +27,12 @@
   % \newfontfamily{\ai}{\ai@family}
   % \newfontfamily\ai@font{\ai@family}[Path=./,Extension=.otf]
   % \newfontfamily\ai@font{\ai@family}[Path=./,Extension=.ttf]
-  \newfontfamily\ai@font{\ai@family}
+  \newfontfamily\ai@font{\ai@family}[
+    UprightFont = \ai@family,
+    BoldFont = \ai@family,
+    ItalicFont = \ai@family,
+    BoldItalicFont = \ai@family
+  ]
 
   % \newcommand\ai@unicodefont{\usefont{TU}{\ai@family}{m}{n}}
   % \renewcommand*{\aiicon}[1]{\ai@font\csname aiicon@#1\endcsname}
